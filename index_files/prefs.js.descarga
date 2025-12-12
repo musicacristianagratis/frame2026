@@ -1,0 +1,16 @@
+var timePrefs = {
+    "times": [
+        {
+            "hour": [0, 23],
+            "background": "./index_files/navidad.png", /* todo el dia */
+            "clock": true,
+            "clock_position": ["128px", "", "", "24px"] /* TRBL */
+        }
+    ]
+};
+
+function doPrefs(){
+    currentTimeInt = getLocalTimeInt(); // Get current time 24 hour / int check
+    currentTime = getLocalTime(); // Get current time normally.
+    updateLoop = setInterval(updateIntv, 500); // 500ms cycles to update time and background updates.
+}
